@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- main styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <img src="images/logo.svg" alt="" class="logo">
+    <div class="container">
+        <div class="inputs">
+            <label for="bill">bill</label>
+            <div class="bill">
+                <input type="number" name="bill" id="bill" placeholder="0">
+            </div>
+            <label>select tip %</label>
+            <div class="tip-amount">
+                <div class="tip" data-value="5">5%</div>
+                <div class="tip" data-value="10">10%</div>
+                <div class="tip" data-value="15">15%</div>
+                <div class="tip" data-value="25">25%</div>
+                <div class="tip" data-value="50">50%</div>
+                <input id="custom" type="number" placeholder="custom">
+            </div>
+            <label for="poeple">number of poeple</label>
+            <div class="poeple">
+                <input type="number" name="poeple" id="poeple" placeholder="0">
+                <div class="error"></div>
+            </div>
+        </div>
+        <div class="outputs">
+            <div class="output">
+                <div class="description">
+                    <h3>Tip Amount</h3>
+                    <p>/ person</p>
+                </div>
+                <div class="result">
+                    $<span id="tip-person">0.00</span>
+                </div>
+            </div>
+            <div class="output">
+                <div class="description">
+                    <h3>total</h3>
+                    <p>/ person</p>
+                </div>
+                <div class="result">
+                    $<span id="tip-total">0.00</span>
+                </div>
+            </div>
+            <button>reset</button>
+        </div>
+    </div>
+    <!-- main script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

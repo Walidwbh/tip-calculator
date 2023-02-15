@@ -1,0 +1,187 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --main-transition: 0.6s;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-grayish-cyan);
+}
+/* for the arrows in number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.container .inputs,
+.container .outputs {
+    width: 400px;
+}
+.container .inputs label {
+    display: block;
+    text-transform: capitalize;
+    color: var(--dark-grayish-cyan);
+}
+.container .inputs input {
+    width: 100%;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    border: 2px solid var(--white);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    direction: rtl;
+    position: relative;
+}
+.container .inputs input::placeholder {
+    color: var(--grayish-cyan);
+}
+.container .inputs input:focus {
+    border: 2px solid var(--strong-cyan);
+}
+.container .inputs input.error {
+    border: 2px solid red;
+}
+.container .inputs .bill {
+    position: relative;
+    margin-bottom: 20px;
+}
+.container .inputs .bill::before{
+    content: url(../images/icon-dollar.svg);
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    z-index: 1;
+}
+.container .inputs .poeple {
+    position: relative;
+}
+.container .inputs .poeple::before{
+    content: url(../images/icon-person.svg);
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    z-index: 1;
+}
+.container .inputs .poeple .error {
+    color: red;
+    position: absolute;
+    top: -22px;
+    right: 0;
+}
+.container .inputs .tip-amount {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+.container .inputs .tip {
+    background-color: var(--very-dark-cyan);
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.container .inputs input[id=tip]{
+    padding: 10px;
+}
+.container .inputs .tip.selected {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+/* end inputs section */
+/* begin outputs section */
+.container .outputs {
+    background-color: var(--very-dark-cyan);
+    padding: 30px;
+    border-radius: 10px;
+}
+.container .outputs .output {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.container .outputs .output .description h3{
+    color: var(--very-light-grayish-cyan);
+}
+.container .outputs .output .description p{
+    color: var(--grayish-cyan);
+}
+.container .outputs .output .result {
+    font-size: 44px;
+    color: var(--strong-cyan);
+}
+.container .outputs button {
+    width: 100%;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container .outputs button:hover {
+    background-color: var(--light-grayish-cyan);
+}
+/* begin MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        top: 55%;
+    }
+    .logo {
+        top: 5%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        top: 90%;
+    }
+    .container .inputs,
+    .container .outputs {
+    width: 100%;
+}
+}
