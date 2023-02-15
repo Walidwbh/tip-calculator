@@ -27,7 +27,7 @@ function billFunction(){
 }
 function poepleFunction(){
     poepleValue = parseFloat(people.value);
-    if(people.value<1){
+    if(people.value=="0"){
         people.nextElementSibling.innerHTML ="Can't be zero";
         people.classList.add("invalid");
 
