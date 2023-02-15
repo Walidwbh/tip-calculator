@@ -36,8 +36,8 @@ input[type=number] {
 }
 .container {
     width: fit-content;
-    margin:auto;
     padding: 40px;
+    margin:auto;
     background-color: var(--white);
     border-radius: 20px;
     display: flex;
@@ -60,7 +60,7 @@ input[type=number] {
     color: var(--very-dark-cyan);
     border: 2px solid var(--white);
     outline: none;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     font-size: 24px;
     direction: rtl;
@@ -166,18 +166,5 @@ input[type=number] {
 @media (max-width: 1200px) {
     .container {
         flex-direction: column;
-        /* top: 55%; */
     }
-    .logo {
-        /* top: 5%; */
-    }
-}
-@media (max-width: 768px) {
-    .container {
-        /* top: 80%; */
-    }
-    .container .inputs,
-    .container .outputs {
-    width: 100%;
-}
 }
