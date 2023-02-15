@@ -1,3 +1,4 @@
 # tip-calculator demo
-
-# design inspired from www.frontendmentor.io
+https://walidwbh.github.io/tip-calculator/
+# design inspired from 
+www.frontendmentor.io
