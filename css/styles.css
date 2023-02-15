@@ -31,16 +31,12 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 .logo {
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
+    margin: 40px auto;
+    display: block;
 }
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: fit-content;
+    margin:auto;
     padding: 40px;
     background-color: var(--white);
     border-radius: 20px;
@@ -170,15 +166,15 @@ input[type=number] {
 @media (max-width: 1200px) {
     .container {
         flex-direction: column;
-        top: 55%;
+        /* top: 55%; */
     }
     .logo {
-        top: 5%;
+        /* top: 5%; */
     }
 }
 @media (max-width: 768px) {
     .container {
-        top: 90%;
+        /* top: 80%; */
     }
     .container .inputs,
     .container .outputs {
