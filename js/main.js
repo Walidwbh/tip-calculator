@@ -28,10 +28,12 @@ function billFunction(){
 function poepleFunction(){
     poepleValue = parseFloat(people.value);
     if(people.value<1){
-        // console.log(people.nextElementSibling)
-        // people.classList.add("error");
+        people.nextElementSibling.innerHTML ="Can't be zero";
+        people.classList.add("invalid");
+
     }else{
-        // people.classList.remove("error");
+        people.nextElementSibling.innerHTML ="";
+        people.classList.remove("invalid");
     }
     calculateTip();
 }

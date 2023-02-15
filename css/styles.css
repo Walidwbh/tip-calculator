@@ -72,7 +72,7 @@ input[type=number] {
 .container .inputs input:focus {
     border: 2px solid var(--strong-cyan);
 }
-.container .inputs input.error {
+.container .inputs input[id=poeple].invalid {
     border: 2px solid red;
 }
 .container .inputs .bill {
